@@ -1,0 +1,100 @@
+.main {
+    &-tabs {
+        
+        display: grid;
+        margin-top: 5.8rem;
+        justify-content: center;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+        border-bottom: 1px solid #BDBDBD;
+        padding: 0 4rem;
+        // Tabs title 
+        &-title {
+            cursor: pointer;
+            padding-bottom: 1.9rem;
+            text-align: center;
+            border-bottom: 4px rgba(255, 255, 255, 0) solid;
+        }
+    }
+}
+
+.tab-active {
+    border-bottom: 4px var(--clr-blue) solid;
+}
+
+// Todos Style
+.todos {
+    &-input-container {
+        margin-top: 1.8rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 3.2rem;
+    }
+    ::placeholder {
+        font-size: 1.4rem;
+        color: #828282;
+    }
+    &-input, &-button {
+        border-radius: 12px;
+    }
+    &-input {
+        flex-grow:1;
+        padding: 2rem 1.2rem;
+        border: solid #BDBDBD 1px;
+        margin-right: 2.5rem;
+        
+    }
+    &-button {
+        cursor: pointer;
+        background: var(--clr-blue);
+        color: #FFF;
+        font-weight: 600;
+        font-size: 1.4rem;
+        padding: 2rem 4rem;
+    }
+    
+}
+
+// Todo box
+.todo-box {
+    
+    display: grid;
+    gap: 7px;
+    grid-template-columns: 0fr 1fr 0fr;
+    align-items: center;
+    margin: 2.7rem 0;
+    &-checkbox {
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        
+    }
+    &-icon {
+        cursor: pointer;
+        color: #BDBDBD;
+        font-size: 2.7rem;
+        margin-right: 1rem;
+    }
+    &-text {
+        font-weight: 500;
+        font-size: 1.8rem;
+    }
+}
+
+.button-delete {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 600;
+    padding: 1.2rem 2.6rem;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    background: #EB5757;
+    margin-top: 1.5rem;
+    span {
+        font-size: 1.9rem;
+        margin-right: .5rem;
+    }
+}
