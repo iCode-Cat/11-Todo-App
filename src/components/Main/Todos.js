@@ -6,7 +6,7 @@ import Todo from './Todo'
 
 const Todos = () => {
     
-    const { status, setStatus } = useContext(TodoContext)
+    const { status } = useContext(TodoContext)
     const [todos, setTodo] = useState([
         {
             todo:'Cleaning',
@@ -19,7 +19,6 @@ const Todos = () => {
             id:2
         }
     ])
-    const [filter, setFilter] = useState([])
 
     const deleteOneHandler = (id, deleteAll) => {
        let filter;
@@ -27,7 +26,6 @@ const Todos = () => {
         setTodo(filter)
     }
 
-    const getTodos = localStorage.getItem('todos');
     return (
         <section className="todos">
             {
